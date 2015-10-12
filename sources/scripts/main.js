@@ -24,9 +24,7 @@ function(PIXI, Engine, Global, Render, Sound, Mouse, Keyboard, Animation)
 		requestAnimFrame(animate)
 	}
 
-	// var assetToLoad = [ 'images/background.jpg', 'images/characters.png', 'images/characters.json',
-  // 'images/symbols.png', 'images/symbols.json' ]
-	// for (var i = 0; i < assetToLoad.length; ++i) { PIXI.loader.add(assetToLoad[i]) }
-	// PIXI.loader.once('complete', init).load();
-  document.body.onload = init
+	var assetToLoad = [ 'images/background.jpg' ]
+	for (var i = 0; i < assetToLoad.length; ++i) { PIXI.loader.add(assetToLoad[i]) }
+	PIXI.loader.once('complete', init).load();
 })
